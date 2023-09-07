@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mehran.Institute
@@ -44,6 +37,25 @@ namespace Mehran.Institute
                 frmTerm.Show();
             }
         }
-    
+
+        private void کارکنانToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmEmployee)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmEmployee frmEmployee = new frmEmployee();
+                frmEmployee.MdiParent = this;
+                frmEmployee.Show();
+            }
+
+        }
     }
 }
