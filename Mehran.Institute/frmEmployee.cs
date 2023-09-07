@@ -5,26 +5,29 @@ using System.Windows.Forms;
 
 namespace Mehran.Institute
 {
-    public partial class frmTerm : Form
+    public partial class frmEmployee : Form
     {
-        TermRepository termRep = new TermRepository();
+        EmployeeRepository empRep = new EmployeeRepository();
         int id = 0;
-        public frmTerm()
+        public frmEmployee()
         {
             InitializeComponent();
             BindGrid();
             AddMode();
         }
-
         #region Utility
         public void BindGrid()
         {
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = termRep.GetAll();
+            dataGridView1.DataSource = empRep.GetAll();
         }
         public void ClearForm()
         {
-            txtTermName.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtMobile.Text = string.Empty;
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
         }
         public void EditMode()
         {
@@ -41,59 +44,67 @@ namespace Mehran.Institute
         }
         #endregion
 
-
-        private void frmTerm_Load(object sender, EventArgs e)
+        private void frmEmployee_Load(object sender, EventArgs e)
         {
             BindGrid();
         }
-
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Term trm = new Term();
-            trm.TermName = txtTermName.Text;
-            termRep.Add(trm);
+            Employee emp = new Employee();
+            emp.FirstName = txtFirstName.Text;
+            emp.LastName = txtLastName.Text;
+            emp.Mobile = txtMobile.Text;
+            emp.UserName = txtUsername.Text;
+            emp.Password = txtPassword.Text;
+            empRep.Add(emp);
             BindGrid();
             ClearForm();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 7)
             {
                 if (MessageBox.Show("آیا از حذف رکورد انتخابی اطمینان دارید؟", "هشدار", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     this.id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-                    termRep.Delete(id);
+                    empRep.Delete(id);
                     BindGrid();
                     ClearForm();
                     AddMode();
-
                 }
             }
 
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 6)
             {
 
                 this.id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-                var repo = new TermRepository().GetById(id);
-                txtTermName.Text = repo.TermName;
-                repo.TermID = id;
+                var repo = new EmployeeRepository().GetById(id);
+                txtFirstName.Text = repo.FirstName;
+                txtLastName.Text = repo.LastName;
+                txtMobile.Text = repo.Mobile;
+                txtUsername.Text = repo.UserName;
+                txtPassword.Text = repo.Password;
+
+                repo.EmployeeID = id;
                 EditMode();
             }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Term trm = new Term();
-            trm.TermID = id;
-            trm.TermName = txtTermName.Text;
-            var message = termRep.Update(trm);
+            Employee emp = new Employee();
+            emp.EmployeeID = id;
+            emp.FirstName = txtFirstName.Text;
+            emp.LastName = txtLastName.Text;
+            emp.Mobile = txtMobile.Text;
+            emp.UserName = txtUsername.Text;
+            emp.Password = txtPassword.Text;
+            var message = empRep.Update(emp);
             ClearForm();
             BindGrid();
-            AddMode();
+            EditMode();
             MessageBox.Show(message);
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             AddMode();
