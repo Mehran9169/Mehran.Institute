@@ -57,5 +57,25 @@ namespace Mehran.Institute
             }
 
         }
+
+        private void اساتیدToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmTeacher)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmTeacher frmTeacher = new frmTeacher();
+                frmTeacher.MdiParent = this;
+                frmTeacher.Show();
+            }
+
+        }
     }
 }

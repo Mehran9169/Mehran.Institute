@@ -44,20 +44,18 @@
             // 
             // txtTermName
             // 
-            this.txtTermName.Location = new System.Drawing.Point(54, 31);
-            this.txtTermName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTermName.Location = new System.Drawing.Point(40, 25);
             this.txtTermName.Name = "txtTermName";
-            this.txtTermName.Size = new System.Drawing.Size(368, 22);
+            this.txtTermName.Size = new System.Drawing.Size(277, 20);
             this.txtTermName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(11, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 26);
+            this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "ترم:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -71,13 +69,12 @@
             this.clmnEdit,
             this.clmnDelete});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 146);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 119);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(811, 267);
+            this.dataGridView1.Size = new System.Drawing.Size(608, 217);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -121,10 +118,9 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(54, 61);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(40, 50);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(132, 32);
+            this.btnAdd.Size = new System.Drawing.Size(99, 26);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "افزودن";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -134,22 +130,21 @@
             // 
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(194, 61);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(146, 50);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(124, 32);
+            this.btnUpdate.Size = new System.Drawing.Size(93, 26);
             this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "بروزرسانی";
+            this.btnUpdate.Text = "ویرایش";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(324, 61);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(243, 50);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 32);
+            this.btnCancel.Size = new System.Drawing.Size(74, 26);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "انصراف";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -159,20 +154,21 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(428, 31);
+            this.label5.Location = new System.Drawing.Point(321, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 16);
+            this.label5.Size = new System.Drawing.Size(11, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "*";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmTerm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(811, 413);
+            this.ClientSize = new System.Drawing.Size(608, 336);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -180,7 +176,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTermName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmTerm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
