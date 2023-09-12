@@ -77,5 +77,25 @@ namespace Mehran.Institute
             }
 
         }
+
+        private void مدیریتدورههاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmCourse)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmCourse frmCourse = new frmCourse();
+                frmCourse.MdiParent = this;
+                frmCourse.Show();
+            }
+
+        }
     }
 }

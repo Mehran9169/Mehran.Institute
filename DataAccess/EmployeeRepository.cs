@@ -56,7 +56,7 @@ namespace DataAccess
             db.Employees.Remove(db.Employees.FirstOrDefault(x => x.EmployeeID == empID));
             db.SaveChanges();
         }
-        public IEnumerable<Employee> GetAll()
+        public List<Employee> GetAll()
         {
             var result = db.Employees.ToList();
             return result;

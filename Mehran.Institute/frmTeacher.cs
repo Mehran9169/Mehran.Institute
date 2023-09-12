@@ -177,8 +177,8 @@ namespace Mehran.Institute
 
                 if (!(repo.ResumeFile is null))
                 {
-                    axAcroPDF1.src = repo.ResumeFile;
                     axAcroPDF1.Show();
+                    axAcroPDF1.src = repo.ResumeFile;
                 }
                 else
                     axAcroPDF1.Hide();

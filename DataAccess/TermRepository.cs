@@ -39,7 +39,7 @@ namespace DataAccess
             db.Terms.Remove(db.Terms.FirstOrDefault(x => x.TermID == TermID));
             db.SaveChanges();
         }
-        public IEnumerable<Term> GetAll()
+        public List<Term> GetAll()
         {
             var result = db.Terms.ToList();
             return result;
