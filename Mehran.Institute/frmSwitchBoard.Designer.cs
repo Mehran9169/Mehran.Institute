@@ -83,7 +83,7 @@
             this.مدیریتترمهاToolStripMenuItem.Name = "مدیریتترمهاToolStripMenuItem";
             this.مدیریتترمهاToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.مدیریتترمهاToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.مدیریتترمهاToolStripMenuItem.Size = new System.Drawing.Size(110, 30);
+            this.مدیریتترمهاToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.مدیریتترمهاToolStripMenuItem.Text = "ترم ها";
             this.مدیریتترمهاToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.مدیریتترمهاToolStripMenuItem.Click += new System.EventHandler(this.مدیریتترمهاToolStripMenuItem_Click);
@@ -94,8 +94,9 @@
             this.مدیریتدورههاToolStripMenuItem.Name = "مدیریتدورههاToolStripMenuItem";
             this.مدیریتدورههاToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.مدیریتدورههاToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.مدیریتدورههاToolStripMenuItem.Size = new System.Drawing.Size(110, 30);
+            this.مدیریتدورههاToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.مدیریتدورههاToolStripMenuItem.Text = "دوره ها";
+            this.مدیریتدورههاToolStripMenuItem.Click += new System.EventHandler(this.مدیریتدورههاToolStripMenuItem_Click);
             // 
             // مدیریتاشخاصToolStripMenuItem
             // 
@@ -165,7 +166,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSwitchBoard";
             this.Text = "سیستم مدیریت آموزشگاه مهران";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

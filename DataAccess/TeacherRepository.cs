@@ -44,11 +44,21 @@ namespace DataAccess
             db.Teachers.Remove(db.Teachers.FirstOrDefault(x => x.TeacherID == tchID));
             db.SaveChanges();
         }
-        public IEnumerable<Teacher> GetAll()
+        public List<Teacher> GetAll()
         {
             var result = db.Teachers.ToList();
             return result;
 
+        }
+        public List<TeachersListItem> GetTeacherListDropDown()
+        {
+            var q = from c in db.Teachers
+                    select new TeachersListItem
+                    {
+                        TeacherID = c.TeacherID,
+                        FullInfo = c.TeacherName
+                    };
+            return q.ToList();
         }
     }
 }

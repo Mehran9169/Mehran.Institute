@@ -44,6 +44,7 @@
             this.btnResume = new System.Windows.Forms.Button();
             this.btnPicture = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.TeacherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TeacherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +54,6 @@
             this.Picture = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clmnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clmnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
@@ -206,11 +206,23 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(846, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(213, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(615, 16);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(213, 241);
+            this.axAcroPDF1.TabIndex = 16;
+            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // TeacherID
             // 
@@ -273,23 +285,15 @@
             this.clmnEdit.Name = "clmnEdit";
             this.clmnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmnEdit.Text = "ویرایش";
             this.clmnEdit.UseColumnTextForButtonValue = true;
             // 
             // clmnDelete
             // 
             this.clmnDelete.HeaderText = "حذف";
             this.clmnDelete.Name = "clmnDelete";
+            this.clmnDelete.Text = "حذف";
             this.clmnDelete.UseColumnTextForButtonValue = true;
-            // 
-            // axAcroPDF1
-            // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(615, 16);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(213, 241);
-            this.axAcroPDF1.TabIndex = 16;
-            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // frmTeacher
             // 
@@ -342,6 +346,7 @@
         private System.Windows.Forms.Button btnResume;
         private System.Windows.Forms.Button btnPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeacherID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeacherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
@@ -351,6 +356,5 @@
         private System.Windows.Forms.DataGridViewButtonColumn Picture;
         private System.Windows.Forms.DataGridViewButtonColumn clmnEdit;
         private System.Windows.Forms.DataGridViewButtonColumn clmnDelete;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
