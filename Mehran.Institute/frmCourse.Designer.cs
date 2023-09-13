@@ -48,6 +48,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmbCourseStatus = new System.Windows.Forms.ComboBox();
             this.cmbTeacher = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmbTerm = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,14 +58,14 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 299);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 306);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1012, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(1101, 223);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 28);
+            this.textBox1.Location = new System.Drawing.Point(87, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(173, 20);
             this.textBox1.TabIndex = 1;
@@ -77,35 +80,35 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(333, 28);
+            this.textBox3.Location = new System.Drawing.Point(362, 31);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 20);
+            this.textBox3.Size = new System.Drawing.Size(185, 20);
             this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(643, 136);
+            this.textBox4.Location = new System.Drawing.Point(664, 202);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(173, 20);
             this.textBox4.TabIndex = 4;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(643, 103);
+            this.textBox5.Location = new System.Drawing.Point(664, 141);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(173, 20);
             this.textBox5.TabIndex = 5;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(643, 31);
+            this.textBox7.Location = new System.Drawing.Point(664, 34);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(173, 20);
             this.textBox7.TabIndex = 7;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(643, 66);
+            this.textBox8.Location = new System.Drawing.Point(664, 81);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(173, 20);
             this.textBox8.TabIndex = 8;
@@ -113,120 +116,159 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 31);
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(33, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "نام دوره:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 83);
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(38, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "شهریه:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 136);
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(21, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "استاد دوره:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(543, 110);
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(564, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "تاریخ شروع:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(543, 38);
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(564, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.Size = new System.Drawing.Size(92, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "بازه زمانی(ساعت):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(280, 31);
+            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(303, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(53, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "پیش نیاز:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(543, 73);
+            this.label7.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(568, 84);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.Size = new System.Drawing.Size(71, 17);
             this.label7.TabIndex = 9;
             this.label7.Text = "زمان برگزاری:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(543, 143);
+            this.label8.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(568, 202);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 9;
             this.label8.Text = "تاریخ پایان:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(280, 83);
+            this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(284, 127);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.Size = new System.Drawing.Size(72, 17);
             this.label9.TabIndex = 10;
             this.label9.Text = "محتوای دوره:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 187);
+            this.label10.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(8, 202);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
+            this.label10.Size = new System.Drawing.Size(73, 17);
             this.label10.TabIndex = 11;
             this.label10.Text = "وضعیت دوره:";
             // 
             // cmbCourseStatus
             // 
             this.cmbCourseStatus.FormattingEnabled = true;
-            this.cmbCourseStatus.Location = new System.Drawing.Point(101, 179);
+            this.cmbCourseStatus.Location = new System.Drawing.Point(87, 201);
             this.cmbCourseStatus.Name = "cmbCourseStatus";
-            this.cmbCourseStatus.Size = new System.Drawing.Size(159, 21);
+            this.cmbCourseStatus.Size = new System.Drawing.Size(173, 21);
             this.cmbCourseStatus.TabIndex = 12;
             this.cmbCourseStatus.SelectedIndexChanged += new System.EventHandler(this.cmbCourseStatus_SelectedIndexChanged);
             // 
             // cmbTeacher
             // 
             this.cmbTeacher.FormattingEnabled = true;
-            this.cmbTeacher.Location = new System.Drawing.Point(87, 127);
+            this.cmbTeacher.Location = new System.Drawing.Point(87, 143);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(173, 21);
             this.cmbTeacher.TabIndex = 13;
             this.cmbTeacher.SelectedIndexChanged += new System.EventHandler(this.cmbTeacher_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(329, 83);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 17);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "ترم:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(365, 126);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(182, 96);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
+            // 
+            // cmbTerm
+            // 
+            this.cmbTerm.FormattingEnabled = true;
+            this.cmbTerm.Location = new System.Drawing.Point(365, 79);
+            this.cmbTerm.Name = "cmbTerm";
+            this.cmbTerm.Size = new System.Drawing.Size(182, 21);
+            this.cmbTerm.TabIndex = 15;
             // 
             // frmCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1012, 522);
+            this.ClientSize = new System.Drawing.Size(1101, 529);
+            this.Controls.Add(this.cmbTerm);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.cmbTeacher);
             this.Controls.Add(this.cmbCourseStatus);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -278,5 +320,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbCourseStatus;
         private System.Windows.Forms.ComboBox cmbTeacher;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ComboBox cmbTerm;
     }
 }

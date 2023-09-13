@@ -49,6 +49,16 @@ namespace Mehran.Institute
             cmbCourseStatus.DataSource = courseStatus;
         }
 
+        private void BindTerms()
+        {
+            DataAccess.TermRepository repo = new DataAccess.TermRepository();
+            cmbTerm.DisplayMember = "TermName";
+            cmbTerm.ValueMember = "TermID";
+            var termItems = repo.GetAll();
+            termItems.Insert(0, new Term { TermID = -1, TermName = "انتخاب کنید..." });
+            cmbTerm.DataSource = termItems;
+        }
+
 
         #endregion
 

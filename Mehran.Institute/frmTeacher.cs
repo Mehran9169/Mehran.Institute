@@ -77,7 +77,9 @@ namespace Mehran.Institute
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 pictureFile = openFileDialog.FileName;
-                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+                Image image = Image.FromFile(pictureFile);
+                pictureBox1.Image = new Bitmap(image);
+
             }
 
         }
