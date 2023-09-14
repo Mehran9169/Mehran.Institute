@@ -4,6 +4,7 @@ namespace DomainModel.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using FrameWork;
     using System.Data.Entity.Spatial;
 
     [Table("Course")]
@@ -51,5 +52,68 @@ namespace DomainModel.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registrations { get; set; }
+
+        public string StartDateShamsi
+        {
+            get { return DateHelper.GetPersianDate(this.StartDate); }
+        }     
+        public string EndDateShamsi
+        {
+            
+            get { 
+                if(!(this.EndDate is null))
+                {
+                    return DateHelper.GetPersianDate(this.EndDate.Value);
+                }
+                return null;
+            }
+        }
+
+        public string TeacherName
+        {
+            get
+            {
+                if(!(this.Teacher is null))
+                {
+                    return this.Teacher?.TeacherName;
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
+        }        
+        public string CourseStatusName
+        {
+            get
+            {
+                if(!(this.CourseStatu is null))
+                {
+                    return this.CourseStatu?.CourseStatusName;
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
+        }        
+        public string TermName
+        {
+            get
+            {
+                if(!(this.Term is null))
+                {
+                    return this.Term?.TermName;
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
+        }
+
     }
 }

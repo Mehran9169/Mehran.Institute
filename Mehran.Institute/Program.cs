@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace Mehran.Institute
             Application.SetCompatibleTextRenderingDefault(false);
             Program.AppContext = new ApplicationContext(new frmLogin());
             Application.Run(AppContext);
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fa-IR"); Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fa-IR");
         }
 
         public static void SwitchMainForm(Form newForm)
