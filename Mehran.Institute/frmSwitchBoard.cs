@@ -1,13 +1,26 @@
-﻿using System;
+﻿using DataAccess;
+using DomainModel.Models;
+using System;
 using System.Windows.Forms;
+using FrameWork;
 
 namespace Mehran.Institute
 {
     public partial class frmSwitchBoard : Form
     {
-        public frmSwitchBoard()
+        private string CurrentUserName;
+        public frmSwitchBoard(string cun)
         {
+            EmployeeRepository empRepo= new EmployeeRepository();
+            this.CurrentUserName = cun;
             InitializeComponent();
+            lblCurrentUser.Text = empRepo.GetCurrentUser(cun);
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+
+            lblDate.Text = DateHelper.GetPersianDate(DateTime.Now);
         }
 
         private void frmSwitchBoard_Load(object sender, EventArgs e)
@@ -95,6 +108,27 @@ namespace Mehran.Institute
                 frmCourse.MdiParent = this;
                 frmCourse.Show();
             }
+
+        }
+
+        private void دانشجویانToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmStudent)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmStudent frmStudent = new frmStudent();
+                frmStudent.MdiParent = this;
+                frmStudent.Show();
+            }
+
 
         }
     }

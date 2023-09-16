@@ -10,14 +10,19 @@ namespace Mehran.Institute
         {
             InitializeComponent();
         }
+        //public string CurrentUserName 
+        //{
+        //    EmployeeRepository repo = new EmployeeRepository();
+        //    return repo.GetCurrentUser(txtUsername.Text, txtPassword.Text);
+        //}
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             EmployeeRepository repo = new EmployeeRepository();
 
-
             if (repo.Validate(txtUsername.Text, txtPassword.Text))
             {
-                frmSwitchBoard frm = new frmSwitchBoard();
+                frmSwitchBoard frm = new frmSwitchBoard(txtUsername.Text);
                 frm.Show();
                 Program.SwitchMainForm(frm);
                 this.Hide();

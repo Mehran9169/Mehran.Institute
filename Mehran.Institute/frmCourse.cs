@@ -127,7 +127,7 @@ namespace Mehran.Institute
         {
             TermRepository trmRepo = new TermRepository();
             int termID = Convert.ToInt32(cmbTerm.SelectedValue);
-            var teacherList = trmRepo.GetById(termID);
+            var termList = trmRepo.GetById(termID);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -227,7 +227,7 @@ namespace Mehran.Institute
                 var message = corRepo.Update(cor);
                 ClearForm();
                 BindGrid();
-                EditMode();
+                AddMode();
                 MessageBox.Show(message);
             };
         }

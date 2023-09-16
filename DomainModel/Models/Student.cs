@@ -1,10 +1,8 @@
 namespace DomainModel.Models
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Student")]
     public partial class Student
@@ -45,5 +43,34 @@ namespace DomainModel.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registration> Registrations { get; set; }
+
+        public string CityName
+        {
+            get
+            {
+                if (!(this.City is null))
+                {
+                    return this.City?.CityName;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        public string EducationDegreeName
+        {
+            get
+            {
+                if (!(this.EducationDegree is null))
+                {
+                    return this.EducationDegree?.EducationDegreeName;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 }

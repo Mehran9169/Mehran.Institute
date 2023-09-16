@@ -54,8 +54,10 @@
     <Compile Include="CityRepository.cs" />
     <Compile Include="CourseRepository.cs" />
     <Compile Include="CourseStatusRepository.cs" />
+    <Compile Include="EducationDegreeRepository.cs" />
     <Compile Include="EmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentRepository.cs" />
     <Compile Include="TeacherRepository.cs" />
     <Compile Include="TermRepository.cs" />
   </ItemGroup>
