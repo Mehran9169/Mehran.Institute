@@ -124,7 +124,7 @@
             this.کارکنانToolStripMenuItem.Name = "کارکنانToolStripMenuItem";
             this.کارکنانToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 5, 0, 1);
             this.کارکنانToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.کارکنانToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.کارکنانToolStripMenuItem.Size = new System.Drawing.Size(193, 36);
             this.کارکنانToolStripMenuItem.Text = "کارکنان";
             this.کارکنانToolStripMenuItem.Click += new System.EventHandler(this.کارکنانToolStripMenuItem_Click);
             // 
@@ -134,7 +134,7 @@
             this.اساتیدToolStripMenuItem.Name = "اساتیدToolStripMenuItem";
             this.اساتیدToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 5, 0, 1);
             this.اساتیدToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.اساتیدToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.اساتیدToolStripMenuItem.Size = new System.Drawing.Size(193, 36);
             this.اساتیدToolStripMenuItem.Text = "اساتید";
             this.اساتیدToolStripMenuItem.Click += new System.EventHandler(this.اساتیدToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             this.دانشجویانToolStripMenuItem.Name = "دانشجویانToolStripMenuItem";
             this.دانشجویانToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 5, 0, 1);
             this.دانشجویانToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.دانشجویانToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.دانشجویانToolStripMenuItem.Size = new System.Drawing.Size(193, 36);
             this.دانشجویانToolStripMenuItem.Text = "دانشجویان";
             this.دانشجویانToolStripMenuItem.Click += new System.EventHandler(this.دانشجویانToolStripMenuItem_Click);
             // 
@@ -155,6 +155,7 @@
             this.ثبتنامToolStripMenuItem.Size = new System.Drawing.Size(138, 40);
             this.ثبتنامToolStripMenuItem.Text = "ثبت نام";
             this.ثبتنامToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ثبتنامToolStripMenuItem.Click += new System.EventHandler(this.ثبتنامToolStripMenuItem_Click);
             // 
             // مدیریتپرداختToolStripMenuItem
             // 
