@@ -143,7 +143,7 @@ namespace Mehran.Institute
             }
             if (!ExistInMyChildren)
             {
-                frmRegistration frmStudent = new frmRegistration();
+                frmRegistration frmStudent = new frmRegistration(CurrentUserName);
                 frmStudent.MdiParent = this;
                 frmStudent.Show();
             }

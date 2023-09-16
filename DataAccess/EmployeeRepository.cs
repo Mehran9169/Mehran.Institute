@@ -66,6 +66,11 @@ namespace DataAccess
             var user = db.Employees.FirstOrDefault(x => x.UserName == username).FullName;
             return user;
         }
+        public int GetCurrentUserID(string username)
+        {
+            var userID = db.Employees.FirstOrDefault(x => x.UserName == username).EmployeeID;
+            return userID;
+        }
 
     }
 }

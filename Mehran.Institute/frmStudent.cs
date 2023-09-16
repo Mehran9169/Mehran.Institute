@@ -116,8 +116,8 @@ namespace Mehran.Institute
                 stu.EducationDegreeID = Convert.ToInt32(cmbEducationDegree.SelectedValue);
 
                 stuRepo.Add(stu);
-                BindGrid();
                 ClearForm();
+                BindGrid();
             }
 
         }
@@ -176,9 +176,9 @@ namespace Mehran.Institute
             {
                 var message = stuRepo.Update(stu);
                 ClearForm();
-                BindGrid();
                 AddMode();
                 MessageBox.Show(message);
+                BindGrid();
             };
         }
 

@@ -50,7 +50,7 @@ namespace DomainModel.Models
             {
                 if (!(this.City is null))
                 {
-                    return this.City?.CityName;
+                    return this.City.CityName;
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace DomainModel.Models
             {
                 if (!(this.EducationDegree is null))
                 {
-                    return this.EducationDegree?.EducationDegreeName;
+                    return this.EducationDegree.EducationDegreeName;
                 }
                 else
                 {
