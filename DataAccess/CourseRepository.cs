@@ -27,7 +27,7 @@ namespace DataAccess
         public string Update(Course cor)
         {
             var oldCor = db.Courses.FirstOrDefault(x => x.CourseID == cor.CourseID);
-            if (cor.CourseName is null || cor?.Tuition is null || cor?.TeacherID == null || cor?.StartDate == null || cor?.TermID == null)
+            if (cor.CourseName is null || cor?.Tuition is null || cor?.TeacherID == null || cor?.StartDate == null || cor?.TermID == null || cor?.CourseStatusID == null)
             {
                 return "فیلدهای اجباری نمی تواند خالی باشد";
             }

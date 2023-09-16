@@ -1,9 +1,6 @@
 ﻿using DomainModel.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess
 {
@@ -16,7 +13,7 @@ namespace DataAccess
             return result;
         }
 
-        public List<City> GetAll() 
+        public List<City> GetAll()
         {
             return db.Cities.ToList();
         }

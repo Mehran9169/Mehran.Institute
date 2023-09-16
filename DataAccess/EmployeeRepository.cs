@@ -60,7 +60,11 @@ namespace DataAccess
         {
             var result = db.Employees.ToList();
             return result;
-
+        }
+        public string GetCurrentUser(string username)
+        {
+            var user = db.Employees.FirstOrDefault(x => x.UserName == username).FullName;
+            return user;
         }
 
     }
