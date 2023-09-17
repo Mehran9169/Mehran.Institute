@@ -1,5 +1,6 @@
 namespace DomainModel.Models
 {
+    using FrameWork;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -40,5 +41,26 @@ namespace DomainModel.Models
         public virtual ICollection<Payment> Payments { get; set; }
 
         public virtual Student Student { get; set; }
+
+        public string StudentFullName
+        {
+            get { return this.Student.FirstName + " " + this.Student.LastName; }
+        }
+        public string EmployeeName
+        {
+            get { return this.Employee.FullName; }
+        }
+        public int StudentIDs
+        {
+            get { return this.StudentID; }
+        }
+        public string RegDateShamsi
+        {
+            get { return DateHelper.GetPersianDate(this.RegistrationDate); }
+        }
+        public string CourseName
+        {
+            get { return this.Course.CourseName; }
+        }
     }
 }

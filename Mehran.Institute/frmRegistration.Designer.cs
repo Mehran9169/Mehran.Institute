@@ -48,7 +48,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTuition = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblCurrentUserName = new System.Windows.Forms.Label();
@@ -70,11 +69,12 @@
             this.RegistrationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CourseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentIDs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tuition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -260,11 +260,12 @@
             this.RegistrationID,
             this.RegistrationDate,
             this.CourseID,
-            this.StudentFullName,
+            this.StudentIDs,
             this.EmployeeID,
             this.Tuition,
             this.TotalPayment,
-            this.Description});
+            this.Description,
+            this.btnDelete});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView2.Location = new System.Drawing.Point(0, 785);
             this.dataGridView2.Name = "dataGridView2";
@@ -277,7 +278,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtTuition);
-            this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnRegister);
             this.groupBox2.Controls.Add(this.txtDescription);
             this.groupBox2.Controls.Add(this.lblCurrentUserName);
@@ -311,22 +311,12 @@
             this.txtTuition.Size = new System.Drawing.Size(258, 30);
             this.txtTuition.TabIndex = 7;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(157, 150);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(142, 48);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "ویرایش";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRegister.Location = new System.Drawing.Point(157, 72);
+            this.btnRegister.Location = new System.Drawing.Point(168, 128);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(142, 48);
+            this.btnRegister.Size = new System.Drawing.Size(142, 73);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "ثبت نام";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -479,37 +469,41 @@
             // 
             // RegistrationID
             // 
+            this.RegistrationID.DataPropertyName = "RegistrationID";
             this.RegistrationID.HeaderText = "RegistrationID";
             this.RegistrationID.MinimumWidth = 8;
             this.RegistrationID.Name = "RegistrationID";
+            this.RegistrationID.Visible = false;
             this.RegistrationID.Width = 8;
             // 
             // RegistrationDate
             // 
-            this.RegistrationDate.DataPropertyName = "RegistrationDate";
+            this.RegistrationDate.DataPropertyName = "RegDateShamsi";
             this.RegistrationDate.HeaderText = "تاریخ ثبت نام";
             this.RegistrationDate.MinimumWidth = 8;
             this.RegistrationDate.Name = "RegistrationDate";
+            this.RegistrationDate.Width = 150;
             // 
             // CourseID
             // 
-            this.CourseID.DataPropertyName = "CourseID";
+            this.CourseID.DataPropertyName = "CourseName";
             this.CourseID.HeaderText = "دوره";
             this.CourseID.MinimumWidth = 8;
             this.CourseID.Name = "CourseID";
+            this.CourseID.Width = 150;
             // 
-            // StudentFullName
+            // StudentIDs
             // 
-            this.StudentFullName.DataPropertyName = "StudentFullName";
-            this.StudentFullName.HeaderText = "StudentFullName";
-            this.StudentFullName.MinimumWidth = 8;
-            this.StudentFullName.Name = "StudentFullName";
-            this.StudentFullName.Width = 150;
+            this.StudentIDs.DataPropertyName = "StudentFullName";
+            this.StudentIDs.HeaderText = "دانشجو";
+            this.StudentIDs.MinimumWidth = 8;
+            this.StudentIDs.Name = "StudentIDs";
+            this.StudentIDs.Width = 150;
             // 
             // EmployeeID
             // 
-            this.EmployeeID.DataPropertyName = "EmployeeID";
-            this.EmployeeID.HeaderText = "EmployeeID";
+            this.EmployeeID.DataPropertyName = "EmployeeName";
+            this.EmployeeID.HeaderText = "نام کاربر ثبت کننده";
             this.EmployeeID.MinimumWidth = 8;
             this.EmployeeID.Name = "EmployeeID";
             this.EmployeeID.Width = 150;
@@ -517,7 +511,7 @@
             // Tuition
             // 
             this.Tuition.DataPropertyName = "Tuition";
-            this.Tuition.HeaderText = "Tuition";
+            this.Tuition.HeaderText = "شهریه";
             this.Tuition.MinimumWidth = 8;
             this.Tuition.Name = "Tuition";
             this.Tuition.Width = 150;
@@ -525,7 +519,7 @@
             // TotalPayment
             // 
             this.TotalPayment.DataPropertyName = "TotalPayment";
-            this.TotalPayment.HeaderText = "TotalPayment";
+            this.TotalPayment.HeaderText = "مجموع پرداختی";
             this.TotalPayment.MinimumWidth = 8;
             this.TotalPayment.Name = "TotalPayment";
             this.TotalPayment.Width = 150;
@@ -533,10 +527,21 @@
             // Description
             // 
             this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
+            this.Description.HeaderText = "توضیحات";
             this.Description.MinimumWidth = 8;
             this.Description.Name = "Description";
             this.Description.Width = 150;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.HeaderText = "حذف";
+            this.btnDelete.MinimumWidth = 8;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.UseColumnTextForButtonValue = true;
+            this.btnDelete.Width = 80;
             // 
             // frmRegistration
             // 
@@ -600,16 +605,16 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtTuition;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CourseID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentFullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentIDs;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tuition;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
     }
 }

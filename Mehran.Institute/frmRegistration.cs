@@ -12,6 +12,7 @@ namespace Mehran.Institute
         private readonly RegistrationRepository regRepo = new RegistrationRepository();
         private string CurrentUserName;
         int studentId = 0;
+        int regId = 0;
         public frmRegistration(string cun)
         {
             InitializeComponent();
@@ -31,7 +32,6 @@ namespace Mehran.Institute
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = stuRepo.GetAll();
         }
-
 
         #region DataBinders
         private void BindCourse()
@@ -79,7 +79,6 @@ namespace Mehran.Institute
                 lblStudentLastName.Text = student.LastName;
                 lblStudentNationalCode.Text = student.NationalCode;
                 BindCourse();
-
             }
         }
 
@@ -150,7 +149,24 @@ namespace Mehran.Institute
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 8)
+            {
+                if (MessageBox.Show("آیا از حذف رکورد انتخابی اطمینان دارید؟", "هشدار", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.regId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
+                    regRepo.Delete(regId);
+                    lblCoursePreq.Text = string.Empty;
+                    lblCourseStatus.Text = string.Empty;
+                    lblCurrentUserName.Text = string.Empty;
+                    lblStudentFirstName.Text = string.Empty;
+                    lblStudentLastName.Text = string.Empty;
+                    lblStudentNationalCode.Text = string.Empty;
+                    txtDescription.Text = string.Empty;
+                    txtTuition.Text= string.Empty;
+                    BindCourse();
+                    BindGrid();
+                }
+            }
         }
     }
 }
