@@ -46,13 +46,13 @@ namespace DataAccess
         }
         public List<Teacher> GetAll()
         {
-            var result = db.Teachers.ToList();
+            var result = db.Teachers.AsNoTracking().ToList();
             return result;
 
         }
         public List<TeachersListItem> GetTeacherListDropDown()
         {
-            var q = from c in db.Teachers
+            var q = from c in db.Teachers.AsNoTracking()
                     select new TeachersListItem
                     {
                         TeacherID = c.TeacherID,

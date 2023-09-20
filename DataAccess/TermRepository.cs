@@ -41,7 +41,7 @@ namespace DataAccess
         }
         public List<Term> GetAll()
         {
-            var result = db.Terms.ToList();
+            var result = db.Terms.AsNoTracking().ToList();
             return result;
 
         }

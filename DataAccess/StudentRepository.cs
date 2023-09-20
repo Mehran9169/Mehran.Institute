@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,8 +52,29 @@ namespace DataAccess
         }
         public List<Student> GetAll()
         {
-            var result = db.Students.ToList();
+            var result = db.Students.AsNoTracking().ToList();
             return result;
+        }
+        public List<Student> Search(Student sm)
+        {
+            var q = from item in db.Students select item;
+            if (!string.IsNullOrEmpty(sm.FirstName))
+            {
+                q = q.Where(x => x.FirstName.StartsWith(sm.FirstName));
+            }
+            if (sm.LastName != null)
+            {
+                q = q.Where(x => x.LastName.StartsWith(sm.LastName));
+            }
+            if (sm.NationalCode != null)
+            {
+                q = q.Where(x => x.NationalCode.StartsWith(sm.NationalCode));
+            }
+            if (sm.Mobile != null)
+            {
+                q = q.Where(x => x.Mobile.StartsWith(sm.Mobile));
+            }
+            return q.ToList();
         }
     }
 }

@@ -55,7 +55,7 @@ namespace DataAccess
         }
         public List<Course> GetAll()
         {
-            var result = db.Courses.ToList();
+            var result = db.Courses.AsNoTracking().ToList();
             return result;
         }
     }

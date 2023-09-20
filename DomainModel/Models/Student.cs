@@ -48,28 +48,22 @@ namespace DomainModel.Models
         {
             get
             {
-                if (!(this.City is null))
-                {
-                    return this.City?.CityName;
-                }
-                else
-                {
-                    return null;
-                }
+                return City?.CityName;
             }
         }
         public string EducationDegreeName
         {
             get
             {
-                if (!(this.EducationDegree is null))
-                {
-                    return this.EducationDegree?.EducationDegreeName;
-                }
-                else
-                {
-                    return null;
-                }
+                //if (!(this.EducationDegree is null))
+                //{
+                //    return this.EducationDegree.EducationDegreeName;
+                //}
+                //else
+                //{
+                //    return null;
+                //}
+                return EducationDegree?.EducationDegreeName;
             }
         }
     }

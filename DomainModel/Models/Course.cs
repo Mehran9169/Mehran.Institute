@@ -73,15 +73,15 @@ namespace DomainModel.Models
         {
             get
             {
-                if(!(this.Teacher is null))
-                {
-                    return this.Teacher?.TeacherName;
-                }
-                else
-                {
-                    return null;
-                }
-                
+                //if(!(this.Teacher is null))
+                //{
+                //    return this.Teacher?.TeacherName;
+                //}
+                //else
+                //{
+                //    return null;
+                //}
+                return this.Teacher?.TeacherName;
             }
         }        
         public string CourseStatusName

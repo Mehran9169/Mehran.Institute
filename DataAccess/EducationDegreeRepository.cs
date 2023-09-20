@@ -15,7 +15,7 @@ namespace DataAccess
 
         public List<EducationDegree> GetAll()
         {
-            return db.EducationDegrees.ToList();
+            return db.EducationDegrees.AsNoTracking().ToList();
         }
     }
 }

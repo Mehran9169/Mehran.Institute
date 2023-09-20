@@ -58,13 +58,18 @@ namespace DataAccess
         }
         public List<Employee> GetAll()
         {
-            var result = db.Employees.ToList();
+            var result = db.Employees.AsNoTracking().ToList();
             return result;
         }
         public string GetCurrentUser(string username)
         {
             var user = db.Employees.FirstOrDefault(x => x.UserName == username).FullName;
             return user;
+        }
+        public int GetCurrentUserID(string username)
+        {
+            var userID = db.Employees.FirstOrDefault(x => x.UserName == username).EmployeeID;
+            return userID;
         }
 
     }

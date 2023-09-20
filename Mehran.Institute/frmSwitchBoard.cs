@@ -128,7 +128,25 @@ namespace Mehran.Institute
                 frmStudent.MdiParent = this;
                 frmStudent.Show();
             }
+        }
 
+        private void ثبتنامToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmRegistration)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmRegistration frmStudent = new frmRegistration(CurrentUserName);
+                frmStudent.MdiParent = this;
+                frmStudent.Show();
+            }
 
         }
     }

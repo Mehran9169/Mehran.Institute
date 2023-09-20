@@ -52,8 +52,8 @@
             this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EducationDegreeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EducationDegreeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clmnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,54 +61,61 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(135, 59);
+            this.txtFirstName.Location = new System.Drawing.Point(90, 38);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(230, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(155, 20);
             this.txtFirstName.TabIndex = 0;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(135, 155);
+            this.txtLastName.Location = new System.Drawing.Point(90, 101);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(230, 26);
+            this.txtLastName.Size = new System.Drawing.Size(155, 20);
             this.txtLastName.TabIndex = 1;
             // 
             // txtNationalCode
             // 
-            this.txtNationalCode.Location = new System.Drawing.Point(541, 153);
+            this.txtNationalCode.Location = new System.Drawing.Point(361, 99);
+            this.txtNationalCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtNationalCode.Name = "txtNationalCode";
-            this.txtNationalCode.Size = new System.Drawing.Size(230, 26);
+            this.txtNationalCode.Size = new System.Drawing.Size(155, 20);
             this.txtNationalCode.TabIndex = 2;
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(541, 59);
+            this.txtMobile.Location = new System.Drawing.Point(361, 38);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(2);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(230, 26);
+            this.txtMobile.Size = new System.Drawing.Size(155, 20);
             this.txtMobile.TabIndex = 3;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(135, 247);
+            this.txtAddress.Location = new System.Drawing.Point(90, 161);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(1070, 26);
+            this.txtAddress.Size = new System.Drawing.Size(715, 20);
             this.txtAddress.TabIndex = 4;
             // 
             // cmbEducationDegree
             // 
             this.cmbEducationDegree.FormattingEnabled = true;
-            this.cmbEducationDegree.Location = new System.Drawing.Point(975, 55);
+            this.cmbEducationDegree.Location = new System.Drawing.Point(650, 36);
+            this.cmbEducationDegree.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEducationDegree.Name = "cmbEducationDegree";
-            this.cmbEducationDegree.Size = new System.Drawing.Size(230, 28);
+            this.cmbEducationDegree.Size = new System.Drawing.Size(155, 21);
             this.cmbEducationDegree.TabIndex = 5;
             this.cmbEducationDegree.SelectedIndexChanged += new System.EventHandler(this.cmbEducationDegree_SelectedIndexChanged);
             // 
             // cmbCity
             // 
             this.cmbCity.FormattingEnabled = true;
-            this.cmbCity.Location = new System.Drawing.Point(975, 151);
+            this.cmbCity.Location = new System.Drawing.Point(650, 98);
+            this.cmbCity.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(230, 28);
+            this.cmbCity.Size = new System.Drawing.Size(155, 21);
             this.cmbCity.TabIndex = 6;
             this.cmbCity.SelectedIndexChanged += new System.EventHandler(this.cmbCity_SelectedIndexChanged);
             // 
@@ -116,10 +123,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(77, 59);
+            this.label1.Location = new System.Drawing.Point(51, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(39, 26);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "نام:";
             // 
@@ -127,10 +135,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(11, 155);
+            this.label2.Location = new System.Drawing.Point(7, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(105, 26);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "نام خانوادگی:";
             // 
@@ -138,10 +147,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(428, 155);
+            this.label3.Location = new System.Drawing.Point(285, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(92, 26);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "شماره ملی:";
             // 
@@ -149,9 +159,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(909, 155);
+            this.label4.Location = new System.Drawing.Point(606, 101);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 26);
+            this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "شهر:";
             // 
@@ -159,9 +170,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(56, 247);
+            this.label5.Location = new System.Drawing.Point(37, 161);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 26);
+            this.label5.Size = new System.Drawing.Size(39, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "آدرس:";
             // 
@@ -169,10 +181,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(406, 59);
+            this.label6.Location = new System.Drawing.Point(271, 38);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(114, 26);
+            this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "شماره موبایل:";
             // 
@@ -180,18 +193,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(833, 59);
+            this.label7.Location = new System.Drawing.Point(555, 38);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 26);
+            this.label7.Size = new System.Drawing.Size(82, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "مدرک تحصیلی:";
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(1261, 53);
+            this.btnAdd.Location = new System.Drawing.Point(841, 34);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(111, 37);
+            this.btnAdd.Size = new System.Drawing.Size(74, 24);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "افزودن";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -200,9 +215,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(1261, 145);
+            this.btnUpdate.Location = new System.Drawing.Point(841, 94);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(111, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(74, 24);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "ویرایش";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -211,9 +227,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(1261, 241);
+            this.btnCancel.Location = new System.Drawing.Point(841, 157);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(111, 37);
+            this.btnCancel.Size = new System.Drawing.Size(74, 24);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "انصراف";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -229,16 +246,17 @@
             this.NationalCode,
             this.Mobile,
             this.Address,
-            this.CityID,
-            this.EducationDegreeID,
+            this.CityName,
+            this.EducationDegreeName,
             this.clmnEdit,
             this.clmnDelete});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 412);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 313);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1462, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(1180, 203);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -289,19 +307,19 @@
             this.Address.Name = "Address";
             this.Address.Width = 250;
             // 
-            // CityID
+            // CityName
             // 
-            this.CityID.DataPropertyName = "CityName";
-            this.CityID.HeaderText = "شهر";
-            this.CityID.MinimumWidth = 8;
-            this.CityID.Name = "CityID";
+            this.CityName.DataPropertyName = "CityName";
+            this.CityName.HeaderText = "شهر";
+            this.CityName.MinimumWidth = 8;
+            this.CityName.Name = "CityName";
             // 
-            // EducationDegreeID
+            // EducationDegreeName
             // 
-            this.EducationDegreeID.DataPropertyName = "EducationDegreeName";
-            this.EducationDegreeID.HeaderText = "مدرک تحصیلی";
-            this.EducationDegreeID.MinimumWidth = 8;
-            this.EducationDegreeID.Name = "EducationDegreeID";
+            this.EducationDegreeName.DataPropertyName = "EducationDegreeName";
+            this.EducationDegreeName.HeaderText = "مدرک تحصیلی";
+            this.EducationDegreeName.MinimumWidth = 8;
+            this.EducationDegreeName.Name = "EducationDegreeName";
             // 
             // clmnEdit
             // 
@@ -325,10 +343,10 @@
             // 
             // frmStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1462, 725);
+            this.ClientSize = new System.Drawing.Size(1180, 516);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -347,6 +365,7 @@
             this.Controls.Add(this.txtNationalCode);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmStudent";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -384,8 +403,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NationalCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CityID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EducationDegreeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CityName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EducationDegreeName;
         private System.Windows.Forms.DataGridViewButtonColumn clmnEdit;
         private System.Windows.Forms.DataGridViewButtonColumn clmnDelete;
     }

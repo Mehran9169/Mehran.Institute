@@ -111,5 +111,10 @@ namespace Mehran.Institute
             ClearForm();
             BindGrid();
         }
+
+        private void frmEmployee_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
