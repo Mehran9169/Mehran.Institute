@@ -22,6 +22,8 @@ namespace Mehran.Institute
             BindGrid();
             BindGridStudent();
         }
+
+        #region Utility
         public void BindGrid()
         {
             dataGridView2.AutoGenerateColumns = false;
@@ -32,6 +34,19 @@ namespace Mehran.Institute
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = stuRepo.GetAll();
         }
+        public void ClearForm()
+        {
+            lblCoursePreq.Text = string.Empty;
+            lblCourseStatus.Text = string.Empty;
+            lblCurrentUserName.Text = string.Empty;
+            lblStudentFirstName.Text = string.Empty;
+            lblStudentLastName.Text = string.Empty;
+            lblStudentNationalCode.Text = string.Empty;
+            txtDescription.Text = string.Empty;
+            txtTuition.Text = string.Empty;
+            cmbCourse.Text = string.Empty;
+        }
+        #endregion
 
         #region DataBinders
         private void BindCourse()
@@ -145,6 +160,7 @@ namespace Mehran.Institute
             regRepo.Add(reg);
             MessageBox.Show("ثبت نام با موفقیت انجام شد.");
             BindGrid();
+            ClearForm();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -155,15 +171,7 @@ namespace Mehran.Institute
                 {
                     this.regId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
                     regRepo.Delete(regId);
-                    lblCoursePreq.Text = string.Empty;
-                    lblCourseStatus.Text = string.Empty;
-                    lblCurrentUserName.Text = string.Empty;
-                    lblStudentFirstName.Text = string.Empty;
-                    lblStudentLastName.Text = string.Empty;
-                    lblStudentNationalCode.Text = string.Empty;
-                    txtDescription.Text = string.Empty;
-                    txtTuition.Text= string.Empty;
-                    BindCourse();
+                    //BindCourse();
                     BindGrid();
                 }
             }

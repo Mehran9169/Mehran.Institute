@@ -58,7 +58,7 @@ namespace DataAccess
         }
         public List<Employee> GetAll()
         {
-            var result = db.Employees.ToList();
+            var result = db.Employees.AsNoTracking().ToList();
             return result;
         }
         public string GetCurrentUser(string username)

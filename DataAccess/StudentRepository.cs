@@ -52,7 +52,7 @@ namespace DataAccess
         }
         public List<Student> GetAll()
         {
-            var result = db.Students.ToList();
+            var result = db.Students.AsNoTracking().ToList();
             return result;
         }
         public List<Student> Search(Student sm)

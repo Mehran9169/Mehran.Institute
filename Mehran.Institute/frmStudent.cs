@@ -118,6 +118,8 @@ namespace Mehran.Institute
                 stuRepo.Add(stu);
                 ClearForm();
                 BindGrid();
+                BindCity();
+                BindEducationDegree();
             }
 
         }

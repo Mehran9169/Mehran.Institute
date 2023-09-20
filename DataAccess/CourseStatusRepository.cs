@@ -18,7 +18,7 @@ namespace DataAccess
 
         public List<CourseStatus> GetAll()
         {
-            return db.CourseStatus.ToList();
+            return db.CourseStatus.AsNoTracking().ToList();
         }
 
 

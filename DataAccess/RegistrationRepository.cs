@@ -39,7 +39,7 @@ namespace DataAccess
         }
         public List<Registration> GetAll()
         {
-            var result = db.Registrations.ToList();
+            var result = db.Registrations.AsNoTracking().ToList();
             return result;
         }
     }

@@ -15,7 +15,7 @@ namespace DataAccess
 
         public List<City> GetAll()
         {
-            return db.Cities.ToList();
+            return db.Cities.AsNoTracking().ToList();
         }
     }
 }

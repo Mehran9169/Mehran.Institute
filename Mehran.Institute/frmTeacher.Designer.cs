@@ -61,28 +61,25 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(154, 25);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(103, 16);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(230, 26);
+            this.txtName.Size = new System.Drawing.Size(155, 20);
             this.txtName.TabIndex = 1;
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(154, 86);
-            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMobile.Location = new System.Drawing.Point(103, 56);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(230, 26);
+            this.txtMobile.Size = new System.Drawing.Size(155, 20);
             this.txtMobile.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(5, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 26);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "نام و نام خانوادگی:";
             // 
@@ -90,10 +87,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(34, 92);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(23, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 26);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "شماره موبایل:";
             // 
@@ -101,19 +97,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(88, 154);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(59, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 26);
+            this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "درباره:";
             // 
             // txtAbout
             // 
-            this.txtAbout.Location = new System.Drawing.Point(154, 151);
-            this.txtAbout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAbout.Location = new System.Drawing.Point(103, 98);
             this.txtAbout.Name = "txtAbout";
-            this.txtAbout.Size = new System.Drawing.Size(230, 146);
+            this.txtAbout.Size = new System.Drawing.Size(155, 96);
             this.txtAbout.TabIndex = 5;
             this.txtAbout.Text = "";
             // 
@@ -121,19 +115,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(496, 29);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(331, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 26);
+            this.label5.Size = new System.Drawing.Size(91, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "توضیحات رزومه:";
             // 
             // txtResumeDescription
             // 
-            this.txtResumeDescription.Location = new System.Drawing.Point(642, 25);
-            this.txtResumeDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtResumeDescription.Location = new System.Drawing.Point(428, 16);
             this.txtResumeDescription.Name = "txtResumeDescription";
-            this.txtResumeDescription.Size = new System.Drawing.Size(234, 275);
+            this.txtResumeDescription.Size = new System.Drawing.Size(157, 180);
             this.txtResumeDescription.TabIndex = 6;
             this.txtResumeDescription.Text = "";
             // 
@@ -151,11 +143,10 @@
             this.clmnEdit,
             this.clmnDelete});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 490);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 396);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1606, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(1370, 261);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -246,10 +237,9 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(154, 360);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(103, 234);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(232, 35);
+            this.btnAdd.Size = new System.Drawing.Size(155, 23);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "افزودن";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -258,10 +248,9 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(402, 360);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(268, 234);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(231, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(154, 23);
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "ویرایش";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -270,10 +259,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(645, 360);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Location = new System.Drawing.Point(430, 234);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(232, 35);
+            this.btnCancel.Size = new System.Drawing.Size(155, 23);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "انصراف";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -282,10 +270,9 @@
             // btnResume
             // 
             this.btnResume.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnResume.Location = new System.Drawing.Point(645, 315);
-            this.btnResume.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnResume.Location = new System.Drawing.Point(430, 205);
             this.btnResume.Name = "btnResume";
-            this.btnResume.Size = new System.Drawing.Size(232, 35);
+            this.btnResume.Size = new System.Drawing.Size(155, 23);
             this.btnResume.TabIndex = 13;
             this.btnResume.Text = "انتحاب رزومه";
             this.btnResume.UseVisualStyleBackColor = true;
@@ -294,10 +281,9 @@
             // btnPicture
             // 
             this.btnPicture.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnPicture.Location = new System.Drawing.Point(402, 315);
-            this.btnPicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPicture.Location = new System.Drawing.Point(268, 205);
             this.btnPicture.Name = "btnPicture";
-            this.btnPicture.Size = new System.Drawing.Size(231, 35);
+            this.btnPicture.Size = new System.Drawing.Size(154, 23);
             this.btnPicture.TabIndex = 14;
             this.btnPicture.Text = "انتخاب تصویر";
             this.btnPicture.UseVisualStyleBackColor = true;
@@ -306,10 +292,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1269, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(858, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 371);
+            this.pictureBox1.Size = new System.Drawing.Size(238, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -317,20 +302,19 @@
             // axAcroPDF1
             // 
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(940, 25);
-            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.axAcroPDF1.Location = new System.Drawing.Point(602, 12);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(288, 370);
+            this.axAcroPDF1.Size = new System.Drawing.Size(238, 241);
             this.axAcroPDF1.TabIndex = 16;
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // frmTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1606, 892);
+            this.ClientSize = new System.Drawing.Size(1370, 657);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPicture);
@@ -347,7 +331,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmTeacher";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
