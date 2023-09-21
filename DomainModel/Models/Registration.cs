@@ -6,6 +6,7 @@ namespace DomainModel.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Registration")]
     public partial class Registration
@@ -61,6 +62,22 @@ namespace DomainModel.Models
         public string CourseName
         {
             get { return this.Course.CourseName; }
+        }
+
+        public string RegisterInf
+        {
+            get
+            {
+                return this.StudentFullName + " - " + this.CourseName;
+            }
+        }
+
+        public int PaymentSum
+        {
+            get
+            {
+                return this.Payments.Sum(x => x.Amount);
+            }
         }
     }
 }

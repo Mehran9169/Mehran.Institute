@@ -564,6 +564,7 @@
             this.Name = "frmCourse";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت دوره ها";
             this.Load += new System.EventHandler(this.frmCourse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -102,6 +102,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ورود کاربران";
             this.ResumeLayout(false);
             this.PerformLayout();

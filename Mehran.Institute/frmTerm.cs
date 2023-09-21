@@ -12,6 +12,7 @@ namespace Mehran.Institute
         public frmTerm()
         {
             InitializeComponent();
+            WindowState= FormWindowState.Normal;
             BindGrid();
             AddMode();
         }

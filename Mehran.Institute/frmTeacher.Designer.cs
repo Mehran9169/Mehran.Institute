@@ -54,6 +54,7 @@
             this.btnPicture = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
@@ -309,12 +310,25 @@
             this.axAcroPDF1.TabIndex = 16;
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(263, 16);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(11, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "*";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1370, 657);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnPicture);
@@ -335,6 +349,7 @@
             this.Name = "frmTeacher";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت اساتید";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -370,5 +385,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Picture;
         private System.Windows.Forms.DataGridViewButtonColumn clmnEdit;
         private System.Windows.Forms.DataGridViewButtonColumn clmnDelete;
+        private System.Windows.Forms.Label label11;
     }
 }

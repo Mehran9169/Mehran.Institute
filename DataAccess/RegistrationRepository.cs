@@ -42,5 +42,26 @@ namespace DataAccess
             var result = db.Registrations.AsNoTracking().ToList();
             return result;
         }
+        public List<RegistrationListItem> GetRegListDropDown()
+        {
+
+            var q = from c in db.Registrations.AsNoTracking()
+                    select new RegistrationListItem
+                    {
+                        RegistrationID = c.RegistrationID,
+                        FullInfo = c.RegistrationID + " - " + c.Student.FirstName + " " + c.Student.LastName  + " - "
+                        + c.Course.CourseName
+                    };
+            return q.ToList();
+        }
+
+        public int Summary(int id)
+        {
+            var regItem = db.Registrations.AsNoTracking()
+                            .FirstOrDefault(x => x.RegistrationID == id).Payments;
+            var sum = regItem.Sum(x => x.Amount);
+            return sum;
+        }
+
     }
 }
