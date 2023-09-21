@@ -44,6 +44,7 @@
             this.lblDate = new System.Windows.Forms.ToolStripLabel();
             this.lblTime = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.خروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +62,13 @@
             this.اطلاعاتپایهToolStripMenuItem,
             this.مدیریتاشخاصToolStripMenuItem,
             this.ثبتنامToolStripMenuItem,
-            this.مدیریتپرداختToolStripMenuItem});
+            this.مدیریتپرداختToolStripMenuItem,
+            this.خروجToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(1164, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 7, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(99, 684);
+            this.menuStrip1.Size = new System.Drawing.Size(99, 657);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip";
             // 
@@ -164,6 +166,7 @@
             this.مدیریتپرداختToolStripMenuItem.Size = new System.Drawing.Size(92, 31);
             this.مدیریتپرداختToolStripMenuItem.Text = "مدیریت پرداخت";
             this.مدیریتپرداختToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.مدیریتپرداختToolStripMenuItem.Click += new System.EventHandler(this.مدیریتپرداختToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -198,13 +201,23 @@
             this.lblCurrentUser,
             this.lblDate,
             this.lblTime});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 684);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 657);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.toolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.toolStrip1.Size = new System.Drawing.Size(1263, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // خروجToolStripMenuItem
+            // 
+            this.خروجToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
+            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.خروجToolStripMenuItem.Text = "خروج";
+            this.خروجToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.خروجToolStripMenuItem.Click += new System.EventHandler(this.خروجToolStripMenuItem_Click);
             // 
             // frmSwitchBoard
             // 
@@ -212,7 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Mehran.Institute.Properties.Resources.geometric_science_education_background_vector_gradient_blue_digital_remix_53876_125993;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1263, 709);
+            this.ClientSize = new System.Drawing.Size(1263, 682);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
@@ -248,5 +261,6 @@
         private System.Windows.Forms.ToolStripLabel lblDate;
         private System.Windows.Forms.ToolStripLabel lblTime;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripMenuItem خروجToolStripMenuItem;
     }
 }

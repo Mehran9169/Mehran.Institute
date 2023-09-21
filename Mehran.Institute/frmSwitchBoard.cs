@@ -149,5 +149,29 @@ namespace Mehran.Institute
             }
 
         }
+
+        private void مدیریتپرداختToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ExistInMyChildren = false;
+            foreach (Form frm in this.MdiChildren)
+            {
+                if (frm is frmPayment)
+                {
+                    ExistInMyChildren = true;
+                    frm.Activate();
+                }
+            }
+            if (!ExistInMyChildren)
+            {
+                frmPayment frmPayment = new frmPayment(CurrentUserName,0);
+                frmPayment.MdiParent = this;
+                frmPayment.Show();
+            }
+        }
+
+        private void خروجToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

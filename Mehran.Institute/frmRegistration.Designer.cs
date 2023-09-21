@@ -54,8 +54,11 @@
             this.Tuition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPayment = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtTuition = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -267,6 +270,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.ColumnHeadersHeight = 34;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegistrationID,
             this.RegDateShamsi,
@@ -276,14 +280,15 @@
             this.Tuition,
             this.TotalPayment,
             this.Description,
+            this.btnPayment,
             this.btnDelete});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 463);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 466);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1199, 234);
+            this.dataGridView2.Size = new System.Drawing.Size(1352, 234);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -338,7 +343,7 @@
             // 
             // TotalPayment
             // 
-            this.TotalPayment.DataPropertyName = "TotalPayment";
+            this.TotalPayment.DataPropertyName = "PaymentSum";
             this.TotalPayment.HeaderText = "مجموع پرداختی";
             this.TotalPayment.MinimumWidth = 8;
             this.TotalPayment.Name = "TotalPayment";
@@ -351,6 +356,15 @@
             this.Description.MinimumWidth = 8;
             this.Description.Name = "Description";
             this.Description.Width = 150;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.HeaderText = "پرداخت";
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnPayment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnPayment.Text = "پرداخت";
+            this.btnPayment.UseColumnTextForButtonValue = true;
             // 
             // btnDelete
             // 
@@ -365,6 +379,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtTuition);
             this.groupBox2.Controls.Add(this.btnRegister);
             this.groupBox2.Controls.Add(this.txtDescription);
@@ -393,6 +409,32 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ثبت نام";
+            this.groupBox2.MouseHover += new System.EventHandler(this.groupBox2_MouseHover);
+            this.groupBox2.ParentChanged += new System.EventHandler(this.groupBox2_ParentChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(448, 112);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 15);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "*";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(764, 72);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 15);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "*";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtTuition
             // 
@@ -581,7 +623,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1199, 697);
+            this.ClientSize = new System.Drawing.Size(1352, 700);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox1);
@@ -589,8 +631,9 @@
             this.Name = "frmRegistration";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ثبت نام";
+            this.Click += new System.EventHandler(this.frmRegistration_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -641,6 +684,8 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtTuition;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegDateShamsi;
         private System.Windows.Forms.DataGridViewTextBoxColumn CourseName;
@@ -649,6 +694,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tuition;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalPayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewButtonColumn btnPayment;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
     }
 }

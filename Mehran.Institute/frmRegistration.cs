@@ -120,21 +120,21 @@ namespace Mehran.Institute
         private void button2_Click(object sender, EventArgs e)
         {
             txtFirstName.Text = string.Empty;
-            txtLastName.Text= string.Empty;
-            txtMobile.Text= string.Empty;
-            txtNationalCode.Text= string.Empty;
+            txtLastName.Text = string.Empty;
+            txtMobile.Text = string.Empty;
+            txtNationalCode.Text = string.Empty;
         }
 
         private void cmbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
             CourseRepository courseRepo = new CourseRepository();
             int CourseID = Convert.ToInt32(cmbCourse.SelectedValue);
-            if(!(CourseID == -1))
+            if (!(CourseID == -1))
             {
-            var courseList = courseRepo.GetById(CourseID);
-            lblCourseStatus.Text = courseList.CourseStatusName;
-            lblCoursePreq.Text = courseList.Preq;
-            txtTuition.Text = courseList.Tuition.ToString();
+                var courseList = courseRepo.GetById(CourseID);
+                lblCourseStatus.Text = courseList.CourseStatusName;
+                lblCoursePreq.Text = courseList.Preq;
+                txtTuition.Text = courseList.Tuition.ToString();
             }
             else
             {
@@ -142,7 +142,7 @@ namespace Mehran.Institute
                 lblCoursePreq.Text = string.Empty;
                 lblCourseStatus.Text = string.Empty;
             }
-            
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -155,6 +155,7 @@ namespace Mehran.Institute
             reg.Tuition = Convert.ToInt32(txtTuition.Text);
             reg.Description = txtDescription.Text;
             // TODO : Change When Payment Implement
+            // TODO : Pass To Payment Form
             reg.TotalPayment = 0;
 
             regRepo.Add(reg);
@@ -165,7 +166,7 @@ namespace Mehran.Institute
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 9)
             {
                 if (MessageBox.Show("آیا از حذف رکورد انتخابی اطمینان دارید؟", "هشدار", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -175,6 +176,27 @@ namespace Mehran.Institute
                     BindGrid();
                 }
             }
+            if (e.ColumnIndex == 8)
+            {
+                this.regId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
+                frmPayment frm = new frmPayment(this.CurrentUserName , regId);
+                frm.Show();
+            }
+        }
+
+        private void frmRegistration_Click(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void groupBox2_ParentChanged(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void groupBox2_MouseHover(object sender, EventArgs e)
+        {
+            BindGrid();
         }
     }
 }

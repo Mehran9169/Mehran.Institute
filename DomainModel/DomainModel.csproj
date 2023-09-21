@@ -67,6 +67,7 @@
     <Compile Include="Models\VW_Courses.cs" />
     <Compile Include="Models\VW_Registeration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\RegistrationListItem.cs" />
     <Compile Include="ViewModels\TeachersListItem.cs" />
   </ItemGroup>
   <ItemGroup>
