@@ -132,7 +132,7 @@ namespace Mehran.Institute
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtCourseName.Text is null || txtTution.Text is null || Convert.ToInt32(cmbTeacher.SelectedValue) == -1 || dpStartDate.Value == null || Convert.ToInt32(cmbTerm.SelectedValue) == -1 || Convert.ToInt32(cmbCourseStatus.SelectedValue) == -1
+            if (txtCourseName.Text == string.Empty || txtTution.Text == string.Empty || Convert.ToInt32(cmbTeacher.SelectedValue) == -1 || dpStartDate.Value == null || Convert.ToInt32(cmbTerm.SelectedValue) == -1 || Convert.ToInt32(cmbCourseStatus.SelectedValue) == -1
                 || cmbTeacher.SelectedValue is null || cmbTerm.SelectedValue is null || cmbCourseStatus.SelectedValue is null)
             {
                 MessageBox.Show("فیلد های اجباری نمی توانند خالی باشند");
@@ -177,6 +177,7 @@ namespace Mehran.Institute
                 BindTeachers();
                 BindCourseStatus();
                 BindTerms();
+
                 this.id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
                 var repo = new CourseRepository().GetById(id);
                 txtCourseName.Text = repo.CourseName;
@@ -218,10 +219,9 @@ namespace Mehran.Institute
             cor.RuningTime = txtRuningTime.Text;
             cor.StartDate = DateHelper.ToGeorgianDateTime(dpStartDate.Text);
             cor.EndDate = DateHelper.ToGeorgianDateTimeNullable(dpEndDate.Text);
-            if (cor.CourseName is null || cor?.Tuition is null || cor?.TeacherID == null || cor?.StartDate == null || cor?.TermID == null || cor?.CourseStatusID == null)
-            {
+            if (txtCourseName.Text == string.Empty || txtTution.Text == string.Empty || Convert.ToInt32(cmbTeacher.SelectedValue) == -1 || dpStartDate.Value == null || Convert.ToInt32(cmbTerm.SelectedValue) == -1 || Convert.ToInt32(cmbCourseStatus.SelectedValue) == -1
+                || cmbTeacher.SelectedValue is null || cmbTerm.SelectedValue is null || cmbCourseStatus.SelectedValue is null)
                 MessageBox.Show("فیلد های اجباری نمی توانند خالی باشند");
-            }
             else
             {
                 var message = corRepo.Update(cor);
